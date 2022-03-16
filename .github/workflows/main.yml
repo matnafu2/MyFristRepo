@@ -40,7 +40,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           javac -cp Java/"junit-4.10.jar:." Java/*.java
-          java -cp Java/"junit-4.10.jar:." Java/org.junit.runner.JUnitCore TestAdd
+          java -cp Java/"junit-4.10.jar:." org.junit.runner.JUnitCore TestAdd
 
 
   TestSub:
@@ -57,4 +57,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           javac -cp Java/"junit-4.10.jar:." Java/*.java
-          java -cp Java/"junit-4.10.jar:." Java/org.junit.runner.JUnitCore TestSub
+          java -cp Java/"junit-4.10.jar:." org.junit.runner.JUnitCore TestSub
