@@ -39,22 +39,22 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          javac -cp "junit-4.10.jar:." *.java
-          java -cp "junit-4.10.jar:." org.junit.runner.JUnitCore TestAdd
+          javac -cp Java/"junit-4.10.jar:." Java/*.java
+          java -cp Java/"junit-4.10.jar:." Java/org.junit.runner.JUnitCore TestAdd
 
 
-  # TestSub:
-  #   # The type of runner that the job will run on
-  #   runs-on: ubuntu-latest
-  #   container: openjdk
+  TestSub:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    container: openjdk
 
-  #   # Steps represent a sequence of tasks that will be executed as part of the job
-  #   steps:
-  #     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-  #     - uses: actions/checkout@v2
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
 
-  #     # Runs a set of commands using the runners shell
-  #     - name: Run a multi-line script
-  #       run: |
-  #         javac -cp "junit-4.10.jar:." *.java
-  #         java -cp "junit-4.10.jar:." org.junit.runner.JUnitCore TestSub
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          javac -cp Java/"junit-4.10.jar:." Java/*.java
+          java -cp Java/"junit-4.10.jar:." Java/org.junit.runner.JUnitCore TestSub
