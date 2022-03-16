@@ -21,7 +21,11 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
+<<<<<<< HEAD:Java/.github/workflows/main.yml
           javac -cp "junit-4.10.jar:." *.java
+=======
+          javac -cp "junit-4.10.jar:." *..java
+>>>>>>> 22e1abacae0c287992f2f9075c095f095620130c:.github/workflows/main.yml
 
 
   TestAdd:
